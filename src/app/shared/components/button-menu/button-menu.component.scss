@@ -1,0 +1,70 @@
+.contaier{
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        text-decoration: none;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        .conatinerPlanet{
+            display: flex;
+            div{
+                width: 32px;
+                height: 25px;
+                border-radius: 50%;   
+            }
+        }
+        .mercury{
+            background: #DEF4FC;
+        }
+        .venus{
+            background: #F7CC7F;
+        }
+        .earth{
+            background: #545BFE;
+        }
+        .mars{
+            background: #FF6A45;
+        }
+        .jupiter{
+            background: #ECAD7A;
+        }
+        .saturn{
+            background: #FCCB6B;
+        }
+        .uranus{
+            background: #65F0D5;
+        }
+        .neptune{
+            background: #497EFA;
+        }
+        a{
+            margin: 0px;
+            margin-left: 15px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+    @media (min-width: 770px) {
+        a.active{
+            border-bottom: 2px solid #3df3ff;
+            width: auto;
+            a{
+                margin: 0px;
+            }
+        }
+        .conatinerPlanet{
+            div{
+                display: none;
+            }
+        }
+        mat-icon{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+section{
+    width: 80%;
+    margin: 0 auto;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    h2{
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+    p{
+        font-size: 2rem;
+    }
+}

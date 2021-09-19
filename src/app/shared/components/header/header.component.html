@@ -1,0 +1,27 @@
+<header>
+    <div>
+    <a routerLink='/home'>The Planets</a>
+    <button (click)='changeMenu()'>
+      <mat-icon *ngIf='menu'>menu</mat-icon>
+      <mat-icon *ngIf='!menu'>close</mat-icon>
+    </button>
+    <ul *ngIf='!menu'>
+        <li
+        *ngFor='let item of platensItems'
+        >
+        <app-button-menu 
+        (send)='changeMenu()'
+        [datafirst]='item'
+        ></app-button-menu></li>
+    </ul>
+    <nav>
+        <div
+        *ngFor='let item of platensItems'
+        >
+        <app-button-menu 
+        (send)='changeMenu()'
+        [datafirst]='item'
+        ></app-button-menu></div>
+    </nav>
+    </div>
+</header>

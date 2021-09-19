@@ -1,0 +1,26 @@
+div{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: .5px solid white;
+    margin-block: 25px;
+    padding: 15px;
+    min-width: 250px;
+    max-width: 350px;
+    margin-inline: 10px;
+    h3{
+        color: #bbbbbb;
+        font-size: .8rem;
+    }
+    h3, p {
+        margin: 0px;
+        text-transform: uppercase;
+    }
+    p{
+        font-weight: bolder;
+        font-size: 1rem;
+        color: white;
+    }
+}

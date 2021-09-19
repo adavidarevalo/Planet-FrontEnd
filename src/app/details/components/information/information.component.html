@@ -1,0 +1,64 @@
+<app-spinner *ngIf='!data'></app-spinner>
+<nav *ngIf='data'>
+    <mat-button-toggle-group>
+        <mat-button-toggle 
+        (click)='changeInformation()'
+        (click)='overview = true'
+        >Overview</mat-button-toggle>
+        <mat-button-toggle
+        (click)='changeInformation()'
+        (click)='structure = true'
+        >Structure</mat-button-toggle>
+        <mat-button-toggle
+        (click)='changeInformation()'
+        (click)='surface = true'        
+        >Surface</mat-button-toggle>
+    </mat-button-toggle-group>
+</nav>>
+<section>
+    <div *ngIf='overview' class='ImageContainer'>
+      <img src={{data.overview.image}} alt="Planet">
+    </div>
+    <div *ngIf='structure' class='ImageContainer'>
+        <img src={{data.structure.image}} alt="Planet">
+    </div>
+    <div *ngIf='surface' class='ImageContainer'>
+        <img src={{data.overview.image}} alt="Planet">
+        <img src={{data.surface.image}} alt="Planet">
+    </div>
+    <div class='GridContainer'>
+    <div>
+        <h2>{{data.name}}</h2>
+        <p *ngIf='overview' class='description'>{{data.overview.description}}</p>
+        <p *ngIf='structure' class='description'>{{data.structure.description}}</p>
+        <p *ngIf='surface' class='description'>{{data.surface.description}}</p>
+        <p class='wikipedia-link'>Source: <a href={{data.source}}
+            target="_blank"
+            >Wikipedia <mat-icon>arrow_right</mat-icon></a></p>
+    </div>
+    <mat-button-toggle-group>
+        <mat-button-toggle 
+        (click)='changeInformation()'
+        (click)='overview = true'
+        >Overview</mat-button-toggle>
+        <mat-button-toggle
+        (click)='changeInformation()'
+        (click)='structure = true'
+        >Structure</mat-button-toggle>
+        <mat-button-toggle
+        (click)='changeInformation()'
+        (click)='surface = true'        
+        >Surface</mat-button-toggle>
+    </mat-button-toggle-group>
+    </div>
+    <div
+    class='InformationContainerData' 
+    >
+        <div
+        *ngFor='let item of data.main'>
+            <app-cards-i
+            [infoContainer] = 'item'
+            ></app-cards-i>
+        </div>
+    </div>
+</section>
