@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiFetchService } from '../../../core/service/api-fetch.service'
-
+import { MenuService } from "../../../core/service/menu.service"
 
 @Component({
   selector: 'app-header',
@@ -12,8 +12,14 @@ export class HeaderComponent implements OnInit {
   platensItems: any = []
 
   constructor(
-    private apiFetchService: ApiFetchService
-  ) { }
+    private apiFetchService: ApiFetchService,
+    private menuService: MenuService
+  ) {
+    this.menuService.menuContainer$.subscribe(item =>{
+      console.log(item)
+      this.menu = item
+    })
+   }
 
   ngOnInit(): void {
     this.fetchPlanets()

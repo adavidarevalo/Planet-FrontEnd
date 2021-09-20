@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from "../../../core/service/menu.service"
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  count = 0 
+  constructor(
+    private menuService: MenuService
+  ) { }
+
 
   ngOnInit(): void {
   }
+
+  clickRocket(){
+    this.menuService.changeMenu()
+  }
+
+
 
 }
