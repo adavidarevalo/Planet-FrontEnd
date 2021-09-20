@@ -14,7 +14,8 @@ section{
     margin: 0 auto;
     text-align: center;
     color: white;
-    animation: zoomIn 1s both;
+    margin-top: 185px;
+    
     h2{
         font-size: 1.5rem;
         font-weight: 400;
@@ -56,6 +57,7 @@ section{
 
 
 div{
+    animation: zoomIn 1s both;
     margin-top: 25px;
     min-height: 233px;
     display: flex;

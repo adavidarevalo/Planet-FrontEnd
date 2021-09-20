@@ -1,5 +1,10 @@
 header{
     background: #070724;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
 }
 
 div{
@@ -65,10 +70,17 @@ div{
         nav{
             width: 100%;
             border: none;
-            background: red;
             div{
                 border: none;
                 color: white;
+                a{
+                    margin: 0px;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+                .active{
+                    border-bottom: 2px solid #3df3ff;
+                }
             }
         }
 

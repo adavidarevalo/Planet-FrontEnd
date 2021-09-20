@@ -18,10 +18,11 @@
         <div
         *ngFor='let item of platensItems'
         >
-        <app-button-menu 
-        (send)='changeMenu()'
-        [datafirst]='item'
-        ></app-button-menu></div>
+        <a
+        routerLink='/details/{{item.name}}'
+        routerLinkActive="active"
+        >{{item.name}}</a>
+       </div>
     </nav>
     </div>
 </header>

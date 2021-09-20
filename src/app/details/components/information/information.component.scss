@@ -4,6 +4,7 @@ nav{
     border-bottom: 1px solid white;
     padding: 10px 0px;
     animation: fadeInDown 1s both;
+    margin-top: 70px;
     mat-button-toggle-group{
         display: flex;
         justify-content: space-between;
@@ -38,6 +39,7 @@ nav{
     }
 }
 section{
+    margin-top: 0px;
     animation: fadeIn 1.5s both;
     .ImageContainer{
         min-width: 150px;
@@ -98,6 +100,12 @@ section{
             }
         }
     }
+    }
+    @media (min-width: 770px) {
+        margin-top: 80px;
+    }
+    @media (min-width: 900px) {
+        margin-top: 170px;
     }
 }
 .wikipedia-link{

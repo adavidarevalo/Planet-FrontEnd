@@ -11,12 +11,16 @@
         justify-content: space-between;
         align-items: center;
         color: white;
+        .mat-icon{
+            display: block;
+        }
         .conatinerPlanet{
             display: flex;
-            div{
+            .ContainerPlanetGlove{
                 width: 32px;
                 height: 25px;
                 border-radius: 50%;   
+                display: block;
             }
         }
         .mercury{
@@ -48,23 +52,6 @@
             margin-left: 15px;
             text-transform: uppercase;
             text-decoration: none;
-        }
-    }
-    @media (min-width: 770px) {
-        a.active{
-            border-bottom: 2px solid #3df3ff;
-            width: auto;
-            a{
-                margin: 0px;
-            }
-        }
-        .conatinerPlanet{
-            div{
-                display: none;
-            }
-        }
-        mat-icon{
-            display: none;
         }
     }
 }
