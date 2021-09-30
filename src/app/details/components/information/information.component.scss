@@ -1,3 +1,4 @@
+
 nav{
     margin: 0 auto;
     width: 90%;
@@ -93,6 +94,9 @@ section{
                 color: #bbbbbb;
                 text-transform: uppercase;
                 border: 1px solid #bbbbbb;
+                &:hover{
+                    animation: fadeBackground 1s both;
+                }
             }
             .mat-button-toggle-checked{
                 background-color: rgb(65, 158, 187);
@@ -133,4 +137,9 @@ section{
     @keyframes fadeIn {
         0% {opacity: 0;}
         100% {opacity: 1;}
+        } 
+        @keyframes fadeBackground {
+            100% {
+                background-color: rgb(65, 158, 187);
+            }
         } 
